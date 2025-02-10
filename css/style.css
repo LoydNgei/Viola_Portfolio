@@ -714,9 +714,19 @@ a:focus {
     font-weight: 400;
 }
 
-.experience .timeline .timeline-text p {
+.experience .timeline .timeline-text p,
+.experience .timeline .timeline-text ul {
     margin: 0;
     font-size: 16px;
+}
+
+.experience .timeline .timeline-text ul {
+    padding-left: 20px; 
+    list-style-type: disc; 
+}
+
+.experience .timeline .timeline-text ul li {
+    margin-bottom: 10px; 
 }
 
 @media (max-width: 767.98px) {
@@ -767,7 +777,7 @@ a:focus {
 }
 
 
-*//*******************************/
+/*******************************/
 /********* Service CSS *********/
 /*******************************/
 .service {
@@ -777,8 +787,8 @@ a:focus {
 }
 
 .service .service-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2x2 grid on large screens */
     gap: 30px; /* Add gap between grid items */
 }
 
@@ -786,7 +796,6 @@ a:focus {
     position: relative;
     display: flex;
     align-items: stretch; /* Ensure equal height */
-    width: 100%;
     background: #ffffff;
     border: 1px solid #e0e0e0; /* Add border for distinction */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
@@ -848,6 +857,10 @@ a:focus {
 }
 
 @media (max-width: 767.98px) {
+    .service .service-grid {
+        grid-template-columns: 1fr; /* Single column on small screens */
+    }
+
     .service .service-item {
         flex-direction: column; /* Stack icon and text on smaller screens */
     }
