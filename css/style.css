@@ -883,90 +883,52 @@ a:focus {
     padding: 45px 0 15px 0;
 }
 
-.portfolio #portfolio-filter {
-    padding: 0;
-    margin: -15px 0 25px 0;
-    list-style: none;
-    font-size: 0;
-    text-align: center;
-}
-
-.portfolio #portfolio-filter li {
-    cursor: pointer;
-    display: inline-block;
-    margin: 5px;
-    padding: 6px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-    background: #EF233C;
-    border: 2px solid transparent;
-    border-radius: 0;
-    box-shadow: inset 0 0 0 50px #EF233C;
-    transition: ease-out 0.3s;
-    -webkit-transition: ease-out 0.3s;
-    -moz-transition: ease-out 0.3s;
-}
-
-.portfolio #portfolio-filter li:hover,
-.portfolio #portfolio-filter li.filter-active {
-    color: #EF233C;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
-}
-
 .portfolio .portfolio-item {
     position: relative;
+    margin-bottom: 30px;
 }
 
 .portfolio .portfolio-wrap {
     position: relative;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .portfolio .portfolio-img {
     position: relative;
     overflow: hidden;
+    height: 200px; /* Set a fixed height for the images */
 }
 
 .portfolio .portfolio-img img {
-    position: relative;
-    width: 100%; 
-    height: 100%; 
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transform: scale(1.1);
     transition: .5s;
-}
-
-.portfolio .portfolio-item:hover img {
-    margin-left: 15px;
 }
 
 .portfolio .portfolio-text {
     position: relative;
-    height: 60px;
-    width: calc(100% - 30px);
-    margin: -30px 15px 30px 15px;
-    display: flex;
-    align-items: center;
+    padding: 15px;
     background: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, .12);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .portfolio .portfolio-text h3 {
-    width: calc(100% - 70px);
     font-size: 18px;
     font-weight: 600;
-    margin: 0 0 0 15px;
-    white-space: nowrap;
-    overflow: hidden;
+    margin: 0;
 }
 
 .portfolio .portfolio-text a.btn {
     width: 50px;
     height: 50px;
-    padding: 0 0 2px 1px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -974,508 +936,6 @@ a:focus {
     font-weight: 100;
 }
 
-.portfolio .portfolio-item:hover a.btn {
-    color: #EF233C;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
-}
-
-
-/*******************************/
-/********* Banner CSS **********/
-/*******************************/
-.banner {
-    position: relative;
-    width: 100%;
-    margin: 45px 0;
-    padding: 90px 0;
-    background: #EF233C;
-}
-
-.banner .container {
-    max-width: 750px;
-    text-align: center;
-}
-
-.banner .section-header {
-    margin-bottom: 20px;
-}
-
-.banner .section-header p {
-    color: #414141;
-    background: transparent;
-}
-
-.banner .section-header p::after {
-    display: none;
-}
-
-.banner .section-header h2 {
-    color: #ffffff;
-}
-
-.banner .section-header h2 span {
-    color: #414141;
-    font-size: 50px;
-}
-
-.banner .banner-text p {
-    font-size: 18px;
-    color: #ffffff;
-}
-
-.banner .banner-text .btn {
-    margin-top: 15px;
-    color: #EF233C;
-    background: #ffffff;
-    box-shadow: inset 0 0 0 50px #ffffff;
-}
-
-.banner .banner-text .btn:hover {
-    color: #ffffff;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #ffffff;
-    border-color: #ffffff;
-}
-
-
-/*******************************/
-/********* Pricing CSS *********/
-/*******************************/
-.price {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
-
-.price .row {
-    padding: 0 15px;
-}
-
-.price .col-md-4 {
-    padding: 0;
-}
-
-.price .price-item {
-    position: relative;
-    margin-bottom: 30px;
-    background: #ffffff;
-}
-
-.price .featured-item {
-    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
-    z-index: 1;
-}
-
-.price .price-header,
-.price .price-body,
-.price .price-footer {
-    position: relative;
-    text-align: center;
-}
-
-.price .price-header {
-    padding: 45px 0 30px 0;
-    color: #414141;
-}
-
-.price .price-item.featured-item .price-header {
-    color: #EF233C;
-}
-
-.price .price-title h2 {
-    font-size: 25px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-.price .price-prices h2 {
-    font-size: 45px;
-    font-weight: 700;
-    margin-left: 10px;
-}
-
-.price .price-prices h2 small {
-    position: absolute;
-    font-size: 18px;
-    font-weight: 400;
-    margin-top: 9px;
-    margin-left: -12px;
-}
-
-.price .price-prices h2 span {
-    margin-left: 1px;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.price .price-item.featured-item h2 {
-    color: #EF233C;
-}
-
-.price .price-body {
-    padding: 0 0 20px 0;
-}
-
-.price .price-description ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.price .price-description ul li {
-    padding: 0 0 20px 0;
-}
-
-.price .price-item .price-action {
-    padding-bottom: 45px;
-}
-
-.price .price-item .price-action .btn {
-    color: #ffffff;
-    background: #414141;
-    box-shadow: inset 0 0 0 50px #414141;
-}
-
-.price .price-item .price-action .btn:hover {
-    color: #414141;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #414141;
-    border-color: #414141;
-}
-
-.price .price-item.featured-item .price-action .btn {
-    color: #ffffff;
-    background: #EF233C;
-    box-shadow: inset 0 0 0 50px #EF233C;
-}
-
-.price .price-item.featured-item .price-action .btn:hover {
-    color: #EF233C;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #EF233C;
-    border-color: #EF233C;
-}
-
-
-/*******************************/
-/*********** Team CSS **********/
-/*******************************/
-.team {
-    position: relative;
-    width: 100%;
-    padding: 45px 0 15px 0;
-}
-
-.team .team-item {
-    position: relative;
-    background: #ffffff;
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    box-shadow: inset 0 0 0 0 transparent;
-    transition: ease-out 0.5s;
-}
-
-.team .team-img {
-    position: relative;
-    width: 50%;
-    overflow: hidden;
-}
-
-.team .team-img img {
-    position: relative;
-    width: 100%;
-    transition: .5s;
-}
-
-.team .team-text {
-    position: relative;
-    width: 50%;
-    padding: 0 30px;
-}
-
-.team .team-text h2 {
-    color: #EF233C;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 5px;
-    transition: 1s;
-}
-
-.team .team-text h4 {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 15px;
-    transition: 1s;
-}
-
-.team .team-text p {
-    margin-bottom: 20px;
-    transition: 1s;
-}
-
-.team .team-social {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.team .team-social a.btn {
-    width: 35px;
-    height: 35px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: normal;
-    margin-right: 5px;
-}
-
-.team .team-item:hover {
-    box-shadow: inset 800px 0 0 0 #EF233C;
-}
-
-.team .team-item:hover .team-img img {
-    transform: scale(1.2);
-}
-
-.team .team-item:hover .team-text h2,
-.team .team-item:hover .team-text h4,
-.team .team-item:hover .team-text p {
-    color: #ffffff;
-}
-
-.team .team-item:hover .team-social a.btn {
-    background: #ffffff;
-}
-
-.team .team-item:hover .team-social a.btn:hover {
-    border-color: #ffffff;
-}
-
-@media(max-width: 575.98px) {
-    .team .team-text {
-        padding: 0 15px;
-    }
-    
-    .team .team-text h2 {
-        font-size: 16px;
-        margin-bottom: 0;
-    }
-
-    .team .team-text h4 {
-        margin-bottom: 5px;
-    }
-
-    .team .team-text p {
-        font-size: 14px;
-        line-height: 18px;
-        margin-bottom: 10px;
-    }
-}
-
-
-/*******************************/
-/******* Testimonial CSS *******/
-/*******************************/
-.testimonial {
-    position: relative;
-    margin: 45px 0;
-    padding: 90px 0;
-    background: #EF233C;
-}
-
-.testimonial .container {
-    max-width: 900px;
-}
-
-.testimonial .testimonial-icon {
-    margin-bottom: 45px;
-    text-align: center;
-}
-
-.testimonial .testimonial-icon i {
-    font-size: 60px;
-    color: rgba(256, 256, 256, .5);
-}
-
-.testimonial .testimonial-item {
-    position: relative;
-    margin: 0 15px;
-    text-align: center;
-}
-
-.testimonial .testimonial-img {
-    position: relative;
-    margin-bottom: 15px;
-    z-index: 1;
-}
-
-.testimonial .testimonial-item img {
-    margin: 0 auto;
-    width: 120px;
-    padding: 10px;
-    border: 5px dotted #ffffff;
-    border-radius: 100px;
-}
-
-.testimonial .testimonial-text {
-    position: relative;
-    margin-top: -70px;
-    padding: 65px 35px 30px 35px;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 500px;
-}
-
-.testimonial .testimonial-item p {
-    font-size: 18px;
-    font-style: italic;
-}
-
-.testimonial .testimonial-text h3 {
-    color: #EF233C;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.testimonial .testimonial-text h4 {
-    color: #666666;
-    font-size: 14px;
-    margin-bottom: 0;
-}
-
-.testimonial .owl-dots {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.testimonial .owl-dot {
-    display: inline-block;
-    margin: 0 5px;
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(256, 256, 256, .5);
-}
-
-.testimonial .owl-dot.active {
-    background: #ffffff;
-}
-
-
-.contact {
-    position: relative;
-    width: 100%;
-    margin: 45px 0;
-    background: #ffffff; /* Set background to white */
-}
-
-.contact .container-fluid {
-    background: #ffffff; /* Set background to white */
-    padding: 20px; /* Add padding for better spacing */
-}
-
-.contact .form-container {
-    background: #ffffff; /* White background for the form container */
-    padding: 40px; /* Add padding inside the form container */
-    border: 1px solid #e0e0e0; /* Add a subtle border for distinction */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
-    max-width: 800px; /* Limit the width of the form container */
-    margin: 0 auto; /* Center the form container */
-}
-
-.contact .contact-form {
-    position: relative;
-    background: #ffffff; /* Ensure form background is white */
-}
-
-.contact .contact-form input {
-    color: #0f0e0e;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid #000000; /* Make borders visible */
-    width: 100%; /* Ensure inputs take full width */
-    margin-bottom: 20px; /* Add spacing between inputs */
-}
-
-.contact .contact-form textarea {
-    color: #0b0a0a;
-    height: 90px;
-    padding: 15px 0;
-    background: none;
-    border-radius: 0;
-    border: none;
-    border-bottom: 1px solid #000000; /* Make borders visible */
-    width: 100%; /* Ensure textarea takes full width */
-    margin-bottom: 20px; /* Add spacing below textarea */
-}
-
-.contact .contact-form .form-control::placeholder {
-    color: #000000;
-    opacity: 1;
-}
-
-.contact .contact-form .form-control:-ms-input-placeholder,
-.contact .contact-form .form-control::-ms-input-placeholder {
-    color: #000000;
-}
-
-.contact .contact-form .btn {
-    margin-top: 35px;
-    color: #ffffff;
-    background: #ff0000; /* Red background for the button */
-    border: 1px solid #ff0000; /* Add border to button */
-    padding: 10px 20px; /* Add padding for better button appearance */
-    cursor: pointer; /* Add pointer cursor */
-    width: 100%; /* Make button full width */
-}
-
-.contact .contact-form .btn:hover {
-    color: #ff0000;
-    background: transparent;
-    border-color: #ff0000;
-}
-
-.contact .help-block ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 14px;
-    font-style: italic;
-    color: #ff0000; /* Change error message color to red */
-}
-
-/* Center and style the title */
-.contact h2 {
-    text-align: center; /* Center the title */
-    margin-bottom: 30px; /* Add spacing below the title */
-    font-size: 2rem; /* Increase font size */
-    color: #000000; /* Set title color to black */
-}
-
-@media (max-width: 767.98px) {
-    .contact .container-fluid {
-        background: #ffffff; /* Ensure background remains white on mobile */
-    }
-
-    .contact .contact-form {
-        padding: 90px 0;
-    }
-
-    .contact .form-container {
-        padding: 20px; /* Reduce padding on smaller screens */
-    }
-}
 /*******************************/
 /*********** Blog CSS **********/
 /*******************************/
@@ -1488,29 +948,31 @@ a:focus {
 .blog .blog-item {
     position: relative;
     margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .blog .blog-img {
     position: relative;
     width: 100%;
     overflow: hidden;
+    height: 200px; /* Set a fixed height for the images */
 }
 
 .blog .blog-img img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     transition: .5s;
-}
-
-.blog .blog-item:hover img {
-    transform: scale(1.1);
 }
 
 .blog .blog-text {
     position: relative;
     padding: 30px;
-    border-right: 1px solid rgba(0, 0, 0, .07);
-    border-bottom: 1px solid rgba(0, 0, 0, .07);
-    border-left: 1px solid rgba(0, 0, 0, .07);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, .07);
+    flex-grow: 1;
 }
 
 .blog .blog-text h2 {
@@ -1529,26 +991,6 @@ a:focus {
 
 .blog .blog-item a.btn i {
     margin-left: 5px;
-}
-
-.blog .blog-meta {
-    position: relative;
-    display: flex;
-    margin-bottom: 15px;
-}
-
-.blog .blog-meta p {
-    margin: 0 10px 0 0;
-    font-size: 13px;
-}
-
-.blog .blog-meta i {
-    color: #414141;
-    margin-right: 5px;
-}
-
-.blog .blog-meta p:last-child {
-    margin: 0;
 }
 
 
