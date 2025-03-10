@@ -1,5 +1,11 @@
 $(function () {
 
+        // Check if jqBootstrapValidation is available
+        if (typeof $.fn.jqBootstrapValidation === 'undefined') {
+            console.error('jqBootstrapValidation plugin is not loaded.');
+            return;
+        }    
+
     $("#contactForm input, #contactForm textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function ($form, event, errors) {
